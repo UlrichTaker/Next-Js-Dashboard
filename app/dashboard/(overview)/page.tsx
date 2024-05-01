@@ -5,6 +5,10 @@ import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton } from '@/app/ui/skeletons';
 
+// J'ai Implémenté du streaming pour empêcher les demandes de données lentes de bloquer l'intégralité de votre page et pour permettre à l'utilisateur de commencer à interagir avec l'interface utilisateur sans attendre que tout se charge.
+// J'ai Déplacé la récupération des données vers les composants qui en ont besoin, isolant ainsi les parties de vos itinéraires qui doivent être dynamiques en vue du prérendu partiel.
+
+
 
 export default async function Page() {
 
